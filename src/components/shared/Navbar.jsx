@@ -10,11 +10,14 @@ export default function Navbar() {
   const { user } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Determine the redirect path based on user role
+  const redirectPath = user ? (user.role === 'admin' ? '/admin' : '/student') : '/';
+
   return (
     <header className="glass-navbar">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link to={redirectPath} className="flex items-center space-x-2 group">
             <div className="glass-icon-container p-2 rounded-full 
                           bg-gradient-to-br from-primary/20 to-secondary/20
                           group-hover:scale-110 transition-all duration-300">
