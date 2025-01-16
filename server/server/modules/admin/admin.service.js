@@ -1,7 +1,7 @@
 const PaymentDetails = require('../payments/payment.model');
 const Student_Registrations = require('../events/studentRegistration.model');
 const { sequelize } = require('../../config/dataBase');
-
+const Event = require('../events/events.model');
 exports.createEvent = async (eventData) => {
   const transaction = await sequelize.transaction();
   try {
