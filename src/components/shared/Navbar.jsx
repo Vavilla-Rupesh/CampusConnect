@@ -21,7 +21,7 @@ export default function Navbar() {
             <div className="glass-icon-container p-2 rounded-full 
                           bg-gradient-to-br from-primary/20 to-secondary/20
                           group-hover:scale-110 transition-all duration-300">
-              <Calendar className="h-6 w-6 text-primary" />
+              <img src="../logo.png" alt="logo" width={60} height={60} />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary 
                            bg-clip-text text-transparent">
